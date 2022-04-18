@@ -13,7 +13,6 @@ export class UserService {
 
   getUsers(){
     return this._user.get('https://fakestoreapi.com/users');
-    //return this._user.get('http://localhost:3000/');
   }
 
   getSingleUser(id:number){
