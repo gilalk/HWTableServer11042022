@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-8 offset-2">
+    <h1>Users</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <td>Name</td>
+          <td></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{user.name.firstname + ' ' + user.name.lastname}}</td>
+          <td>
+            <button type="button" class="btn btn-success me-md-2" (click)="cardOn(user.id)">
+              Expand
+            </button>
+            <button type="button" class="btn btn-danger" (click)="cardOff()">
+              Reduce
+            </button>
+            <div class="card" *ngIf="cardId==user.id">
+              <div class="card-body">
+                {{user.email}}
+                <br>
+                <a routerLink="/mainTable/{{user.id}}">more info...</a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

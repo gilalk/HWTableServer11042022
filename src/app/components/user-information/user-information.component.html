@@ -1,0 +1,19 @@
+<div class="card">
+    <h5 class="card-header">User Card</h5>
+    <div class="card-body">
+      <h5 class="card-title">Details</h5>
+      <p class="card-text">
+          <span>Name:</span>  {{user.name.firstname + ' ' + user.name.lastname}}
+          <br>
+          <span>Address:</span> <br>
+          {{user.address.city}} <br>
+          {{user.address.street}} <br>
+          {{user.address.number}} <br>
+          {{user.address.zipcode}} <br>
+          <span>Contact:</span> <br>
+          <span>Phone:</span> {{user.phone}} <br>
+          <span>Email:</span> {{user.email}}
+      </p>
+      <a href="#" class="btn btn-primary">Back To Table</a>
+    </div>
+  </div>
